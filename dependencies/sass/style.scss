@@ -1,0 +1,145 @@
+@import url(normalize.css);
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+//--------------------------------------------------------------------
+//--------------------------------------------------------------------
+
+$gray-dark: #1E262B;
+$gray-back: #FCFCFC;
+
+$gray-usco: #4D626C;
+$gray-400: #839198;
+$gray-200: #DBE0E2;
+$gray-100: #EDEFF0;
+
+$white: #FFF;
+$black: #000;
+
+$usco-wine: #8F141B;
+$usco-wine-100: #DDB8BA;
+$usco-wine-dark: #5C0E12;
+$usco-ocher: #DFD4A6;
+$usco-ocher-100: #F5F2E4;
+$usco-ocher-dark: #C7B363;
+
+
+$border-radius: .8rem;
+$border-width: 3px;
+
+$spacing-buttons: 1.4rem;
+
+//--------------------------------------------------------------------
+//--------------------------------------------------------------------
+
+$grid-breakpoints: (
+  xs: 320px,
+  xm: 390px,
+  sm: 576px,
+  md: 700px, // 768px,
+  lg: 992px,
+  xl: 1280px,
+  xxl: 1480px
+) !default;
+
+//--------------------------------------------------------------------
+//--------------------------------------------------------------------
+
+@mixin transition-all($speed: 0.4s) {
+  transition: all ease-in-out $speed;
+}
+
+@mixin type-font-title {
+  font-family: "Noto Serif", Georgia, 'Times New Roman', Times, serif;
+}
+
+//--------------------------------------------------------------------
+//--------------------------------------------------------------------
+
+// *:focus {
+// 	outline: thin dotted ;
+// }
+
+
+//--------------------------------------------------------------------
+//--------------------------------------------------------------------
+
+:root {
+  --verde: red;
+}
+
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body {
+	font: 14px 'Open Sans', Arial, Helvetica, sans-serif;
+	color: $white;
+	background-color: $usco-wine;
+}
+
+h1 {
+  margin: 0;
+}
+
+$headingSizes: (3em, 2.8em, 2.2em, 1.9em, 1.4em, 1.2em);
+
+%heading {
+  //  margin: ($spacer * 3) 0 ($spacer * 2) 0;
+   @include type-font-title;
+   font-weight: normal;
+}
+
+@for $i from 1 through 6 {
+	h#{$i} {
+      @extend %heading;
+      font-size: nth($headingSizes, $i);
+	}
+}
+
+hr {
+  width: 30%;
+  margin: 4rem auto;
+  height: 1px;
+  background-color: $usco-ocher-dark;
+  border: none;
+}
+
+@import "./panel", "./btn", "./table";
+// "./animations"
+
+h1{
+  color: var(--verde);
+}
+
+
+$loader-width: 80px;
+
+.loader {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  top: 50%;
+  left: 50%;
+  margin: -$loader-width /2 0 0 -$loader-width /2;
+  // will-change: opacity;
+
+  // transition: opacity 0.5s ease-in-out, display 500s ease-in-out;
+  // transition: all 700ms;
+  // transition-delay: 600ms;
+
+  // transition: opacity 0.5s ease-in-out, transition-property 0.5s ease-in-out; /* Agregar transition-property */
+  // transition-property: opacity, display; /* Definir las propiedades animadas */
+
+  transition: opacity 0.5s, display 0.5s allow-discrete;
+
+  &.hidden {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@import "./lds-ripple";
