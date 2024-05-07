@@ -50,7 +50,6 @@
       transition: all 700ms;
       transition-delay: 600ms;
   
-  
       &--info {
         padding-right: 1rem;
         max-height: calc(100vh - 6rem);
@@ -230,8 +229,7 @@
           }
         }
   
-        &--nav {
-  
+        &--nav {  
           & nav {
             & div {
               display: grid;
@@ -247,7 +245,8 @@
               }
   
               &:nth-child(3) {
-                grid-template-columns: 5fr 5fr;
+                gap: $spacing-buttons;
+                grid-template-columns: 5fr 5fr 1fr;
               }
             }
           }        
@@ -325,7 +324,7 @@
                 &--nav {
                     & nav {
                         & div {            
-                            &:first-child, &:nth-child(3) {
+                            &:first-child { //, &:nth-child(3)
                                 display: flex;
                                 justify-content: center;
                             }
@@ -401,6 +400,13 @@
     .panel {
         &__content {
             padding: 2rem 3rem;
+        }
+
+        &.home .panel__content {
+          &--nav nav div:nth-child(3) {
+            gap: $spacing-buttons * .8;
+            grid-template-columns: 1fr;
+          }
         }
     }
 }
