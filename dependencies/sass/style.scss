@@ -77,7 +77,7 @@ html, body {
 
 body {
 	font: 14px 'Open Sans', Arial, Helvetica, sans-serif;
-	color: $white;
+	color: $gray-200;
 	background-color: $usco-wine;
 }
 
@@ -89,8 +89,9 @@ $headingSizes: (3em, 2.8em, 2.2em, 1.9em, 1.4em, 1.2em);
 
 %heading {
   //  margin: ($spacer * 3) 0 ($spacer * 2) 0;
-   @include type-font-title;
-   font-weight: normal;
+  margin: 4rem 0 2rem 0;
+  @include type-font-title;
+  font-weight: normal;
 }
 
 @for $i from 1 through 6 {

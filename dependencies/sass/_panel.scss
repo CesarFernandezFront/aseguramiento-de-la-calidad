@@ -1,6 +1,6 @@
 .panel {
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: center;
     flex-direction: column;
     position: absolute;
@@ -86,36 +86,52 @@
         //     background-position-y: 100%;
         //   }
         // }
+
+        & > h2 {
+          margin-top: 0;
+        }
   
         & a {
+          transition: color linear .6s;
+
           &, &:visited {
             position: relative;
             color: $gray-dark;
+
+            // & .material-icons {
+            //   font-size: 1.1rem;
+            //   // text-decoration: underline;
+            // }
+          }
+
+          &:after, &:visited:after {
+            content: "";
+            height: 1px;
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            width: 0%;
+            background: $usco-wine;
+            transition: .4s;
+          }
+          
+          // &.material-icons::before {
+          //   content: "home";
+          //   color: blue;
+          // }
+
+          &:hover:after, &:visited:hover:after {
+            width: 100%;
           }
         }
-      
-        & a:after, & a:visited:after {
-          content: "";
-          height: 1px;
-          position: absolute;
-          bottom: 1px;
-          left: 0;
-          width: 0%;
-          background: red;
-          transition: 0.2s;
-        }
-      
-        & a:hover:after, & a:visited:hover:after {
-          width: 100%;
-        }
-      
-        & a.block, & a:visited.block {
-          display: block;
-          padding: 0.5em;
-        }
-        & a.block:hover, & a:visited.block:hover {
-          background: #eee;
-        }
+
+        // & a.block, & a:visited.block {
+        //   display: block;
+        //   padding: 0.5em;
+        // }
+        // & a.block:hover, & a:visited.block:hover {
+        //   background: #eee;
+        // }
   
   
         & img {
@@ -135,10 +151,21 @@
           }
         }
   
-        & ul li {
-          margin-bottom: 14px;
+        & ul {
+          & li {
+            margin: 0 0 1rem 0.7rem;
+
+            &::before {
+              position: relative;
+              content: "\203A";
+              margin: -0.3rem 0 0  -0.7rem;
+              padding-right: .4rem;
+              font-size: 1.2rem;
+              color: $usco-wine;
+            }
+          }
         }
-  
+
         & ol {
           & li {
             display: flex;
@@ -245,6 +272,7 @@
               }
   
               &:nth-child(3) {
+                margin-top: $spacing-buttons * .5;
                 gap: $spacing-buttons;
                 grid-template-columns: 5fr 5fr 1fr;
               }
@@ -260,6 +288,28 @@
   
     &.bk-wine {
       background-color: $usco-wine-dark;
+
+      & a {
+        &, &:visited {
+          color: $gray-100;
+        }
+
+        &:after, &:visited:after {
+          background: $usco-ocher;
+        }
+
+        &:hover, &:focus {
+          color: $usco-ocher;
+        }
+      }
+
+      & ul {
+        & li {
+          &::before {
+            color: $gray-400;
+          }
+        }
+      }
     }
   
     &.bk-ocher {
@@ -278,6 +328,12 @@
   
         &:before, &:after {
           background-color: $usco-wine;
+        }
+      }
+
+      a {
+        &:hover, &:focus {
+          color: $usco-wine;
         }
       }
     }

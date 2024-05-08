@@ -53,6 +53,7 @@
           font-size: 1.4rem;
           color: $usco-ocher;
           background-color: $usco-wine;
+          border: $border-width solid rgba($usco-wine-dark, .3);
       
           &:hover, &:focus {
             background-color: $usco-wine-dark;
