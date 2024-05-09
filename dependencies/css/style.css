@@ -22,7 +22,6 @@ h1 {
 }
 
 h6, h5, h4, h3, h2, h1 {
-  margin: 4rem 0 2rem 0;
   font-family: "Noto Serif", Georgia, "Times New Roman", Times, serif;
   font-weight: normal;
 }
@@ -49,6 +48,14 @@ h5 {
 
 h6 {
   font-size: 1.2em;
+}
+
+h1, h2 {
+  margin: 4rem 0 2rem 0;
+}
+
+h3, h4 {
+  margin: 2.5rem 0 1rem 0;
 }
 
 hr {
@@ -127,7 +134,7 @@ hr {
 }
 .panel__content--info a {
   text-decoration: none;
-  border-bottom: 1px solid #DBE0E2;
+  border-bottom: 1px solid #839198;
   transition: color linear 0.6s;
 }
 .panel__content--info a, .panel__content--info a:visited {
@@ -138,7 +145,7 @@ hr {
   content: "";
   height: 1px;
   position: absolute;
-  bottom: 0.1px;
+  bottom: -0.1px;
   left: 0;
   width: 0%;
   background: #8F141B;
@@ -265,6 +272,12 @@ hr {
   background: url(../img/usco-back.svg) 122% center no-repeat;
   background-size: auto 106%;
   background-color: #5C0E12;
+}
+.panel.bk-wine h4 span {
+  padding: 0.2rem 0.8rem;
+  font-size: 0.9rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 0.8rem;
 }
 .panel.bk-wine a, .panel.bk-wine a:visited {
   color: #DFD4A6;
@@ -487,6 +500,9 @@ table caption {
 table th, table td {
   border-right: 1px solid #DBE0E2;
 }
+table th p, table td p {
+  margin: 0;
+}
 table th {
   padding: 1.2rem 0.8rem;
   background-color: rgba(199, 179, 99, 0.7);
@@ -514,10 +530,6 @@ table tr:last-child td:first-child {
 }
 table tr:last-child td:last-child {
   border-radius: 0 0 0.8rem 0;
-}
-
-table p {
-  margin: 0;
 }
 
 @media screen and (max-width: 600px) {
@@ -552,6 +564,14 @@ table p {
 }
 h1 {
   color: var(--verde);
+}
+
+.m-t-0 {
+  margin-top: 0;
+}
+
+.m-b-0 {
+  margin-bottom: 0;
 }
 
 .loader {

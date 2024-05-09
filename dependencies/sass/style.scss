@@ -89,7 +89,6 @@ $headingSizes: (3em, 2.6em, 2.2em, 1.9em, 1.4em, 1.2em);
 
 %heading {
   //  margin: ($spacer * 3) 0 ($spacer * 2) 0;
-  margin: 4rem 0 2rem 0;
   @include type-font-title;
   font-weight: normal;
 }
@@ -99,6 +98,14 @@ $headingSizes: (3em, 2.6em, 2.2em, 1.9em, 1.4em, 1.2em);
       @extend %heading;
       font-size: nth($headingSizes, $i);
 	}
+}
+
+h1, h2 {
+  margin: 4rem 0 2rem 0;
+}
+
+h3, h4 {
+  margin: 2.5rem 0 1rem 0;
 }
 
 hr {
@@ -114,6 +121,14 @@ hr {
 
 h1{
   color: var(--verde);
+}
+
+.m-t-0 {
+  margin-top: 0;
+}
+
+.m-b-0 {
+  margin-bottom: 0;
 }
 
 

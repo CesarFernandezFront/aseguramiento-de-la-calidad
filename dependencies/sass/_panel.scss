@@ -95,7 +95,7 @@
   
         & a {
           text-decoration: none;
-          border-bottom: 1px solid $gray-200;
+          border-bottom: 1px solid $gray-400;
           transition: color linear .6s;
 
           &, &:visited {
@@ -112,7 +112,7 @@
             content: "";
             height: 1px;
             position: absolute;
-            bottom: 0.1px;
+            bottom: -0.1px;
             left: 0;
             width: 0%;
             background: $usco-wine;
@@ -294,6 +294,15 @@
       background: url(../img/usco-back.svg) 122% center no-repeat;
       background-size: auto 106%;
       background-color: $usco-wine-dark;
+
+      & h4 {
+        & span {
+          padding: .2rem .8rem;
+          font-size: .9rem;
+          background-color: rgba($black,.6);
+          border-radius: $border-radius;
+        }
+      }
 
       & a {
         &, &:visited {

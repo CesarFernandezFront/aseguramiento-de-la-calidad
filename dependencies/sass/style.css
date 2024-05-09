@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(normalize.css);
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 :root {
@@ -11,8 +12,8 @@ html, body {
 }
 
 body {
-  font: 14px "Open Sans", Arial, Helvetica, sans-serif;
-  color: #FFF;
+  font: 15px "Open Sans", Arial, Helvetica, sans-serif;
+  color: #DBE0E2;
   background-color: #8F141B;
 }
 
@@ -30,7 +31,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.8em;
+  font-size: 2.6em;
 }
 
 h3 {
@@ -49,6 +50,14 @@ h6 {
   font-size: 1.2em;
 }
 
+h1, h2 {
+  margin: 4rem 0 2rem 0;
+}
+
+h3, h4 {
+  margin: 2.5rem 0 1rem 0;
+}
+
 hr {
   width: 30%;
   margin: 4rem auto;
@@ -59,7 +68,6 @@ hr {
 
 .panel {
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
   position: absolute;
@@ -74,6 +82,8 @@ hr {
 }
 .panel.home {
   z-index: 1;
+  background: url(../img/usco-back.svg) -22% center no-repeat;
+  background-size: auto 106%;
   box-shadow: inset 120px 100px 250px rgba(0, 0, 0, 0.3), inset -120px -100px 250px rgba(0, 0, 0, 0.2);
 }
 .panel.fade {
@@ -119,6 +129,14 @@ hr {
 .panel__content--info::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.6);
 }
+.panel__content--info > h2 {
+  margin-top: 0;
+}
+.panel__content--info a {
+  text-decoration: none;
+  border-bottom: 1px solid #839198;
+  transition: color linear 0.6s;
+}
 .panel__content--info a, .panel__content--info a:visited {
   position: relative;
   color: #1E262B;
@@ -127,21 +145,14 @@ hr {
   content: "";
   height: 1px;
   position: absolute;
-  bottom: 1px;
+  bottom: -0.1px;
   left: 0;
   width: 0%;
-  background: red;
-  transition: 0.2s;
+  background: #8F141B;
+  transition: 0.4s;
 }
-.panel__content--info a:hover:after, .panel__content--info a:visited:hover:after {
+.panel__content--info a:hover:after, .panel__content--info a:focus:after, .panel__content--info a:visited:hover:after {
   width: 100%;
-}
-.panel__content--info a.block, .panel__content--info a:visited.block {
-  display: block;
-  padding: 0.5em;
-}
-.panel__content--info a.block:hover, .panel__content--info a:visited.block:hover {
-  background: #eee;
 }
 .panel__content--info img {
   max-width: 100%;
@@ -158,7 +169,15 @@ hr {
   counter-increment: step-counter;
 }
 .panel__content--info ul li {
-  margin-bottom: 14px;
+  margin: 0 0 1rem 0.7rem;
+}
+.panel__content--info ul li::before {
+  position: relative;
+  content: "›";
+  margin: -0.3rem 0 0 -0.7rem;
+  padding-right: 0.4rem;
+  font-size: 1.2rem;
+  color: #8F141B;
 }
 .panel__content--info ol li {
   display: flex;
@@ -242,6 +261,7 @@ hr {
   grid-template-columns: repeat(3, 1fr);
 }
 .panel.home .panel__content--nav nav div:nth-child(3) {
+  margin-top: 0.7rem;
   gap: 1.4rem;
   grid-template-columns: 5fr 5fr 1fr;
 }
@@ -249,7 +269,28 @@ hr {
   opacity: 1;
 }
 .panel.bk-wine {
+  background: url(../img/usco-back.svg) 122% center no-repeat;
+  background-size: auto 106%;
   background-color: #5C0E12;
+}
+.panel.bk-wine h4 span {
+  padding: 0.2rem 0.8rem;
+  font-size: 0.9rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 0.8rem;
+}
+.panel.bk-wine a, .panel.bk-wine a:visited {
+  color: #DFD4A6;
+  border-color: #DFD4A6;
+}
+.panel.bk-wine a:hover, .panel.bk-wine a:focus {
+  color: #F5F2E4;
+}
+.panel.bk-wine a:after, .panel.bk-wine a:visited:after {
+  background: #F5F2E4;
+}
+.panel.bk-wine ul li::before {
+  color: #839198;
 }
 .panel.bk-ocher {
   color: #1E262B;
@@ -279,6 +320,13 @@ hr {
 }
 .panel.bk-ocher .close:before, .panel.bk-ocher .close:after {
   background-color: #8F141B;
+}
+.panel.bk-ocher a, .panel.bk-ocher a:visited {
+  color: #5C0E12;
+  border-color: #5C0E12;
+}
+.panel.bk-ocher a:hover, .panel.bk-ocher a:focus {
+  color: #8F141B;
 }
 
 @media (max-width: 1480px) {
@@ -434,6 +482,7 @@ hr {
   font-size: 1.4rem;
   color: #DFD4A6;
   background-color: #8F141B;
+  border: 3px solid rgba(92, 14, 18, 0.3);
 }
 .btn-wine:hover, .btn-wine:focus {
   background-color: #5C0E12;
@@ -450,6 +499,9 @@ table caption {
 }
 table th, table td {
   border-right: 1px solid #DBE0E2;
+}
+table th p, table td p {
+  margin: 0;
 }
 table th {
   padding: 1.2rem 0.8rem;
@@ -478,10 +530,6 @@ table tr:last-child td:first-child {
 }
 table tr:last-child td:last-child {
   border-radius: 0 0 0.8rem 0;
-}
-
-table p {
-  margin: 0;
 }
 
 @media screen and (max-width: 600px) {
@@ -518,13 +566,22 @@ h1 {
   color: var(--verde);
 }
 
+.m-t-0 {
+  margin-top: 0;
+}
+
+.m-b-0 {
+  margin-bottom: 0;
+}
+
 .loader {
   position: absolute;
   z-index: 1;
   display: block;
   top: 50%;
   left: 50%;
-  margin: -40px 0 -40px;
+  margin-top: -40px;
+  margin-left: -40px;
   transition: opacity 0.5s, display 0.5s allow-discrete;
 }
 .loader.hidden {
