@@ -15,6 +15,8 @@
   
     &.home {
       z-index: 1;
+      background: url(../img/usco-back.svg) -22% center no-repeat;
+      background-size: auto 106%;
       // // background: radial-gradient(ellipse at center, #ffffff 0%, #CFD8DC 100%);
       // // box-shadow: inset 0px 0px 90px 12px rgba(0,0,0,0.9);
       box-shadow: inset 120px 100px 250px rgba(0,0,0,0.3), inset -120px -100px 250px rgba(0,0,0,0.2);
@@ -92,6 +94,8 @@
         }
   
         & a {
+          text-decoration: none;
+          border-bottom: 1px solid $gray-200;
           transition: color linear .6s;
 
           &, &:visited {
@@ -108,7 +112,7 @@
             content: "";
             height: 1px;
             position: absolute;
-            bottom: 1px;
+            bottom: 0.1px;
             left: 0;
             width: 0%;
             background: $usco-wine;
@@ -120,7 +124,7 @@
           //   color: blue;
           // }
 
-          &:hover:after, &:visited:hover:after {
+          &:hover:after, &:focus:after, &:visited:hover:after {
             width: 100%;
           }
         }
@@ -287,19 +291,22 @@
     }
   
     &.bk-wine {
+      background: url(../img/usco-back.svg) 122% center no-repeat;
+      background-size: auto 106%;
       background-color: $usco-wine-dark;
 
       & a {
         &, &:visited {
-          color: $gray-100;
-        }
-
-        &:after, &:visited:after {
-          background: $usco-ocher;
+          color: $usco-ocher;
+          border-color: $usco-ocher;
         }
 
         &:hover, &:focus {
-          color: $usco-ocher;
+          color: $usco-ocher-100;
+        }
+
+        &:after, &:visited:after {
+          background: $usco-ocher-100;
         }
       }
 
@@ -332,6 +339,11 @@
       }
 
       a {
+        &, &:visited {
+          color: $usco-wine-dark;
+          border-color: $usco-wine-dark;
+        }
+
         &:hover, &:focus {
           color: $usco-wine;
         }

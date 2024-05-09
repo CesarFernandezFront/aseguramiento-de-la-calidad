@@ -12,7 +12,7 @@ html, body {
 }
 
 body {
-  font: 14px "Open Sans", Arial, Helvetica, sans-serif;
+  font: 15px "Open Sans", Arial, Helvetica, sans-serif;
   color: #DBE0E2;
   background-color: #8F141B;
 }
@@ -32,7 +32,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.8em;
+  font-size: 2.6em;
 }
 
 h3 {
@@ -75,6 +75,8 @@ hr {
 }
 .panel.home {
   z-index: 1;
+  background: url(../img/usco-back.svg) -22% center no-repeat;
+  background-size: auto 106%;
   box-shadow: inset 120px 100px 250px rgba(0, 0, 0, 0.3), inset -120px -100px 250px rgba(0, 0, 0, 0.2);
 }
 .panel.fade {
@@ -124,6 +126,8 @@ hr {
   margin-top: 0;
 }
 .panel__content--info a {
+  text-decoration: none;
+  border-bottom: 1px solid #DBE0E2;
   transition: color linear 0.6s;
 }
 .panel__content--info a, .panel__content--info a:visited {
@@ -134,13 +138,13 @@ hr {
   content: "";
   height: 1px;
   position: absolute;
-  bottom: 1px;
+  bottom: 0.1px;
   left: 0;
   width: 0%;
   background: #8F141B;
   transition: 0.4s;
 }
-.panel__content--info a:hover:after, .panel__content--info a:visited:hover:after {
+.panel__content--info a:hover:after, .panel__content--info a:focus:after, .panel__content--info a:visited:hover:after {
   width: 100%;
 }
 .panel__content--info img {
@@ -258,16 +262,19 @@ hr {
   opacity: 1;
 }
 .panel.bk-wine {
+  background: url(../img/usco-back.svg) 122% center no-repeat;
+  background-size: auto 106%;
   background-color: #5C0E12;
 }
 .panel.bk-wine a, .panel.bk-wine a:visited {
-  color: #EDEFF0;
-}
-.panel.bk-wine a:after, .panel.bk-wine a:visited:after {
-  background: #DFD4A6;
+  color: #DFD4A6;
+  border-color: #DFD4A6;
 }
 .panel.bk-wine a:hover, .panel.bk-wine a:focus {
-  color: #DFD4A6;
+  color: #F5F2E4;
+}
+.panel.bk-wine a:after, .panel.bk-wine a:visited:after {
+  background: #F5F2E4;
 }
 .panel.bk-wine ul li::before {
   color: #839198;
@@ -300,6 +307,10 @@ hr {
 }
 .panel.bk-ocher .close:before, .panel.bk-ocher .close:after {
   background-color: #8F141B;
+}
+.panel.bk-ocher a, .panel.bk-ocher a:visited {
+  color: #5C0E12;
+  border-color: #5C0E12;
 }
 .panel.bk-ocher a:hover, .panel.bk-ocher a:focus {
   color: #8F141B;
@@ -549,7 +560,8 @@ h1 {
   display: block;
   top: 50%;
   left: 50%;
-  margin: -40px 0 -40px;
+  margin-top: -40px;
+  margin-left: -40px;
   transition: opacity 0.5s, display 0.5s allow-discrete;
 }
 .loader.hidden {
