@@ -159,5 +159,27 @@ $loader-width-half: $loader-width * .5;
     display: none;
   }
 }
-
 @import "./lds-ripple";
+
+// <div class="grid-documentos">
+// <div>1</div>
+// <div>1</div>
+// <div>1</div>
+// <div>1</div>
+// <div>1</div>
+// </div>
+// .grid-documentos {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+//   // grid-template-rows: repeat(3, auto);
+//   gap: 1rem;
+//   align-items: center;
+//   justify-content: center;
+
+//   & > div {
+//     padding: 0 1rem 1rem 1rem;
+//     border: 1px solid $usco-wine-100;
+//     border-radius: $border-radius;
+//   }
+// }
+

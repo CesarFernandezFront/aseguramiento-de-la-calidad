@@ -2,13 +2,16 @@ const loader = document.getElementById('loader');
 const homePanel = document.getElementById('home');
 const navButtons = document.querySelectorAll('.panel__content--nav .btn');
 const closeButtons = document.querySelectorAll('.panel__content .close');
+// const goToButtons = document.querySelectorAll('button.go-to');
+
+
 
 const addClassHome = () => homePanel.classList.add('view');
 const removeClassHome = () => homePanel.classList.remove('view');
 
 const closePanel = () => {
   addClassHome();
-  additionalFunction();  // Call the new function
+  additionalFunction();
 };
 
 window.addEventListener('load',function(){

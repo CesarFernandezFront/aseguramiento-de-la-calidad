@@ -94,6 +94,9 @@
         }
   
         & a {
+          display: inline-flex;
+          align-items: center;
+          vertical-align: bottom;
           text-decoration: none;
           border-bottom: 1px solid $gray-400;
           transition: color linear .6s;
@@ -108,7 +111,7 @@
             // }
           }
 
-          &:after, &:visited:after {
+          &::after, &:visited::after {
             content: "";
             height: 1px;
             position: absolute;
@@ -123,6 +126,28 @@
           //   content: "home";
           //   color: blue;
           // }
+
+          &::before {
+            margin-right: .4rem;
+            font-family: "Material Icons";
+            font-size: 1.4rem;
+            // content: "download"; //article
+          }
+
+          &[href*=".pdf"]::before {
+            content: "picture_as_pdf";
+          }
+
+          &[href^="mailto:"]::before {
+            content: "mail";
+          }
+
+          &[href*=".doc"], &[href*=".docx"], &[href*=".xls"], &[href*=".xlsx"]{
+            &::before {
+              content: "download";
+            }
+          }
+
 
           &:hover:after, &:focus:after, &:visited:hover:after {
             width: 100%;
@@ -218,7 +243,7 @@
         margin-right: 0;
       }
     
-      &:before, &:after {
+      &:before, &::after {
         content: "";
         position: absolute;
         top: 50%;
@@ -229,7 +254,7 @@
         transition: 0.3s ease-out;
       }
     
-      &:after {
+      &::after {
         transform: translate(-50%, -50%) rotate(45deg);
       }
       &:before {
@@ -237,7 +262,7 @@
       }
     
       &:hover, &:focus {
-        &:before, &:after {
+        &:before, &::after {
           transform: translate(-50%, -50%) rotate(180deg);
         }
       }
@@ -314,7 +339,7 @@
           color: $usco-ocher-100;
         }
 
-        &:after, &:visited:after {
+        &::after, &:visited::after {
           background: $usco-ocher-100;
         }
       }
@@ -342,7 +367,7 @@
         background-color: $usco-ocher;
         border-color: $usco-wine;
   
-        &:before, &:after {
+        &:before, &::after {
           background-color: $usco-wine;
         }
       }

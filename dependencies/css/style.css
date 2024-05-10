@@ -133,6 +133,9 @@ hr {
   margin-top: 0;
 }
 .panel__content--info a {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: bottom;
   text-decoration: none;
   border-bottom: 1px solid #839198;
   transition: color linear 0.6s;
@@ -141,7 +144,7 @@ hr {
   position: relative;
   color: #1E262B;
 }
-.panel__content--info a:after, .panel__content--info a:visited:after {
+.panel__content--info a::after, .panel__content--info a:visited::after {
   content: "";
   height: 1px;
   position: absolute;
@@ -150,6 +153,20 @@ hr {
   width: 0%;
   background: #8F141B;
   transition: 0.4s;
+}
+.panel__content--info a::before {
+  margin-right: 0.4rem;
+  font-family: "Material Icons";
+  font-size: 1.4rem;
+}
+.panel__content--info a[href*=".pdf"]::before {
+  content: "picture_as_pdf";
+}
+.panel__content--info a[href^="mailto:"]::before {
+  content: "mail";
+}
+.panel__content--info a[href*=".doc"]::before, .panel__content--info a[href*=".docx"]::before, .panel__content--info a[href*=".xls"]::before, .panel__content--info a[href*=".xlsx"]::before {
+  content: "download";
 }
 .panel__content--info a:hover:after, .panel__content--info a:focus:after, .panel__content--info a:visited:hover:after {
   width: 100%;
@@ -219,7 +236,7 @@ hr {
 .panel .close:last-child {
   margin-right: 0;
 }
-.panel .close:before, .panel .close:after {
+.panel .close:before, .panel .close::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -229,13 +246,13 @@ hr {
   background-color: #DFD4A6;
   transition: 0.3s ease-out;
 }
-.panel .close:after {
+.panel .close::after {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 .panel .close:before {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-.panel .close:hover:before, .panel .close:hover:after, .panel .close:focus:before, .panel .close:focus:after {
+.panel .close:hover:before, .panel .close:hover::after, .panel .close:focus:before, .panel .close:focus::after {
   transform: translate(-50%, -50%) rotate(180deg);
 }
 .panel.home .panel__content {
@@ -286,7 +303,7 @@ hr {
 .panel.bk-wine a:hover, .panel.bk-wine a:focus {
   color: #F5F2E4;
 }
-.panel.bk-wine a:after, .panel.bk-wine a:visited:after {
+.panel.bk-wine a::after, .panel.bk-wine a:visited::after {
   background: #F5F2E4;
 }
 .panel.bk-wine ul li::before {
@@ -318,7 +335,7 @@ hr {
   background-color: #DFD4A6;
   border-color: #8F141B;
 }
-.panel.bk-ocher .close:before, .panel.bk-ocher .close:after {
+.panel.bk-ocher .close:before, .panel.bk-ocher .close::after {
   background-color: #8F141B;
 }
 .panel.bk-ocher a, .panel.bk-ocher a:visited {
@@ -491,21 +508,18 @@ hr {
 table {
   width: 100%;
   max-width: 100%;
-  border-collapse: collapse;
+  border-spacing: 0.1rem;
   border-radius: 0.8rem;
 }
 table caption {
   display: none;
-}
-table th, table td {
-  border-right: 1px solid #DBE0E2;
 }
 table th p, table td p {
   margin: 0;
 }
 table th {
   padding: 1.2rem 0.8rem;
-  background-color: rgba(199, 179, 99, 0.7);
+  background-color: rgba(199, 179, 99, 0.5);
 }
 table th:first-child {
   border-radius: 0.8rem 0 0 0;
@@ -517,12 +531,12 @@ table td {
   padding: 0.8rem;
 }
 table tr {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 table tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.2);
 }
-table tr:last-child th:last-child, table tr:last-child td:last-child {
+table tr:last-child th:last-child {
   border: none;
 }
 table tr:last-child td:first-child {
@@ -543,14 +557,15 @@ table tr:last-child td:last-child {
     display: none;
   }
   table tr {
-    border-bottom: 3px solid #ddd;
     display: block;
     margin-bottom: 0.625em;
+    border-radius: 0;
   }
   table td {
-    border-bottom: 1px solid #ddd;
     display: block;
     font-size: 0.8em;
+    border-bottom: 1px solid #DBE0E2;
+    border-radius: 0;
   }
   table td:before {
     content: attr(data-label);
