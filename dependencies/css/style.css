@@ -1,10 +1,6 @@
 @charset "UTF-8";
 @import url(normalize.css);
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-:root {
-  --verde: red;
-}
-
 html, body {
   margin: 0;
   padding: 0;
@@ -66,6 +62,14 @@ hr {
   border: none;
 }
 
+.m-t-0 {
+  margin-top: 0;
+}
+
+.m-b-0 {
+  margin-bottom: 0;
+}
+
 .panel {
   display: flex;
   justify-content: center;
@@ -110,6 +114,14 @@ hr {
   will-change: margin-top;
   transition: all 700ms;
   transition-delay: 600ms;
+}
+.panel__content h3 {
+  display: flex;
+  align-items: center;
+}
+.panel__content h3 span {
+  padding: 0.3rem 0.4rem 0 0;
+  font-size: 2.2rem;
 }
 .panel__content--info {
   padding-right: 1rem;
@@ -458,7 +470,7 @@ hr {
   text-decoration: none;
   font-family: "Noto Serif", Georgia, "Times New Roman", Times, serif;
   border-radius: 0.8rem;
-  box-shadow: 0px 6px 7px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 7px 0 rgba(0, 0, 0, 0.4);
   transition: all ease-in-out 0.4s;
 }
 .btn span {
@@ -546,7 +558,7 @@ table tr:last-child td:last-child {
   border-radius: 0 0 0.8rem 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
   table {
     border: 0;
   }
@@ -563,7 +575,6 @@ table tr:last-child td:last-child {
   }
   table td {
     display: block;
-    font-size: 0.8em;
     border-bottom: 1px solid #DBE0E2;
     border-radius: 0;
   }
@@ -577,18 +588,6 @@ table tr:last-child td:last-child {
     border-bottom: 0;
   }
 }
-h1 {
-  color: var(--verde);
-}
-
-.m-t-0 {
-  margin-top: 0;
-}
-
-.m-b-0 {
-  margin-bottom: 0;
-}
-
 .loader {
   position: absolute;
   z-index: 1;
@@ -653,4 +652,124 @@ h1 {
     height: 80px;
     opacity: 0;
   }
+}
+.nav-go {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 0.8rem;
+}
+.nav-go button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.2rem 0.5rem 1.8rem;
+  font-family: "Noto Serif", Georgia, "Times New Roman", Times, serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.8rem;
+  transition: all ease-in-out 0.4s;
+}
+.nav-go button::after {
+  margin-left: 0.2rem;
+  font-family: "Material Icons";
+  font-size: 1rem;
+  content: "arrow_downward";
+}
+.nav-go button .material-icons {
+  margin-left: 0.2rem;
+  font-size: 1rem;
+}
+.nav-go:last-child button::after {
+  content: "arrow_upward";
+}
+
+.bk-ocher .nav-go {
+  background-color: rgba(199, 179, 99, 0.25);
+}
+.bk-ocher .nav-go button {
+  color: rgba(30, 38, 43, 0.6);
+  border-color: rgba(30, 38, 43, 0.2);
+}
+
+.nav-go button:hover, .nav-go button:focus {
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-color: rgba(199, 179, 99, 0.7);
+}
+
+.splide {
+  position: relative;
+}
+.splide__progress__bar {
+  height: 0.2rem;
+  background: rgba(199, 179, 99, 0.5);
+}
+.splide__arrows button {
+  background-color: #C7B363;
+  transition: all ease-in-out 0.2s;
+}
+.splide__arrows button svg {
+  fill: #8F141B;
+}
+.splide__pagination {
+  bottom: -1rem;
+}
+.splide__pagination__page {
+  margin: 0.2rem;
+  background: #C7B363;
+}
+.splide__pagination__page.is-active {
+  background: #8F141B;
+}
+.splide__optional-button-container {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  bottom: 0;
+}
+.splide__optional-button-container button {
+  padding: 0;
+  cursor: pointer;
+  font: 3rem "Material Icons";
+  color: rgba(143, 20, 27, 0.6);
+  background: #C7B363;
+  border-radius: 50%;
+  border: none;
+  transition: all ease-in-out 0.2s;
+}
+.splide__optional-button-container button:hover, .splide__optional-button-container button:focus {
+  color: #5C0E12;
+}
+.splide__slide > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.splide__slide > div img {
+  max-width: 100%;
+  max-height: calc(100vh - 10rem);
+  border-radius: 0.8rem;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1280px) {
+  .splide__arrow--prev {
+    left: 2rem;
+  }
+  .splide__arrow--next {
+    right: 2em;
+  }
+}
+#imagenes .panel__content {
+  padding: 1rem;
 }

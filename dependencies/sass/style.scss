@@ -64,9 +64,12 @@ $grid-breakpoints: (
 //--------------------------------------------------------------------
 //--------------------------------------------------------------------
 
-:root {
-  --verde: red;
-}
+// :root {
+//   --verde: red;
+// }
+// h1{
+//   color: var(--verde);
+// }
 
 
 html, body {
@@ -116,13 +119,6 @@ hr {
   border: none;
 }
 
-@import "./panel", "./btn", "./table";
-// "./animations"
-
-h1{
-  color: var(--verde);
-}
-
 .m-t-0 {
   margin-top: 0;
 }
@@ -130,6 +126,9 @@ h1{
 .m-b-0 {
   margin-bottom: 0;
 }
+
+@import "./panel", "./btn", "./table";
+// "./animations"
 
 
 $loader-width: 80px;
@@ -159,7 +158,12 @@ $loader-width-half: $loader-width * .5;
     display: none;
   }
 }
-@import "./lds-ripple";
+
+@import "./lds-ripple", "./nav-go", "./splide";
+
+#imagenes .panel__content {
+  padding: 1rem;
+}
 
 // <div class="grid-documentos">
 // <div>1</div>

@@ -6,8 +6,7 @@
     <title>Aseguramiento de la Calidad | Universidad Surcolombiana</title>
     <link rel="shortcut icon" href="dependencies/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
-
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.3.1/dist/css/splide.min.css">
     <link rel="stylesheet" type="text/css" href="dependencies/css/style.css" />
 </head>
 <body>
@@ -22,7 +21,6 @@
                 </a>
                  <img src="./dependencies/img/alta-calidad.svg" alt="Acreditación Institucional de Alta Calidad" class="calidad">
             </article>
-    
             <article class="panel__content--nav">
                 <nav>
                     <div>
@@ -67,23 +65,30 @@
     <section class="panel slice bk-ocher" id="oficina">
         <div class="panel__content">
             <div class="panel__content--info">
-                <h2>¿Quiénes Somos?</h2>
+                <h2 id="oficina-somos">¿Quiénes Somos?</h2>
                 <p>La Universidad Surcolombiana, busca constituirse en un referente de  calidad tanto interno como externo, por ello incorpora en su estructura  orgánica institucional, una Unidad asociada al aseguramiento de la calidad y acreditación,  que institucionalice el compromiso asumido con la autorregulación, la  autoevaluación y la adscripción a los estándares de excelencia nacionales e  internacionales.</p>
                 <p>La Oficina de Aseguramiento de la Calidad, adscrita a la Rectoría de la  Universidad Surcolombiana, es una Oficina Asesora con dos áreas de trabajo.</p>
                 <p>El primero, enfocado a los Sistemas de Gestión, los cuales lo integran  Calidad, Ambiental y Seguridad y Salud en el Trabajo y el segundo, el Sub  Sistema de Aseguramiento de la calidad de la Educación Superior, responsable de  Asesorar y coordinar los procesos de Autoevaluación, la formulación y  seguimiento de Planes de Mejoramiento de los programas académicos de Pregrado y  Posgrado con fines de Renovación de Registro Calificado, Acreditación,  Renovación de Acreditación, así como la Renovación de Acreditación  Institucional.</p>
                 <!-- <p><strong><a href="https://www.usco.edu.co/archivosUsuarios/19/publicacion/consejo_superior/acuerdo/acuerdo_059_de_2017.pdf" target="_blank">Acuerdo 059 de 2017</a> - Estatuto Estructura Orgánica</strong>.</p> -->
-                
-                <h3>Normatividad</h3>
+                <hr>
+                <div class="nav-go">
+                    <button type="button" data-go="oficina-normatividad" class="go-to">Normatividad</button>
+                    <button type="button" data-go="oficina-diagrama" class="go-to">Diagrama</button>
+                    <button type="button" data-go="oficina-funciones" class="go-to">Funciones</button>
+                    <button type="button" data-go="oficina-equipo" class="go-to">Equipo de Trabajo</button>
+                </div>
+                <hr>
+                <h3 id="oficina-normatividad">Normatividad</h3>
                 <ul>
                     <li><a href="https://www.usco.edu.co/archivosUsuarios/19/publicacion/consejo_superior/acuerdo/acuerdo_059_de_2017.pdf" target="_blank">Acuerdo 059 de 2017 del Consejo Superior</a>: Estatuto Estructura Orgánica.</li>
                     <li><a href="https://usco.edu.co/archivosUsuarios/19/publicacion/rectoria/resolucion/resolucion_122_de_2019.pdf" target="_blank">Resolución 122 de 2019 de Rectoría</a>: se crea el Comité de Aseguramiento de la Calidad.</li>
                     <li><a href="https://usco.edu.co/archivosUsuarios/21/publicacion/rectoria/resolucion/resolucion_013_de_2021.pdf" target="_blank">Resolución 013 de 2021 de Rectoría</a>: se adopta el Sistema Interno de Aseguramiento de Alta Calidad - SIAAC.</li>
                 </ul>
-                
-                <h3>Diagrama Oficina Aseguramiento de la Calidad</h3>
+                <hr>
+                <h3 id="oficina-diagrama">Diagrama Oficina Aseguramiento de la Calidad</h3>
                 <p><img src="./dependencies/img/diagrama-aseguramiento-calidad.png" alt="Diagrama Oficina Aseguramiento de la Calidad" /></p>
                 <hr />
-                <h3>Funciones</h3>
+                <h3 id="oficina-funciones">Funciones</h3>
                 <ol>
                   <li>Diseñar e  implementar un sistema y un plan de gestión de calidad y auditorias.</li>
                   <li>Diseñar la  metodología del proceso de autoevaluación y acreditación Institucional y  acompañar los Comités de autoevaluación de programas Académicos.</li>
@@ -117,7 +122,7 @@
                   <li>Las demás  que le sean asignadas y sean inherentes a la naturaleza y funciones de la  dependencia.</li>
                 </ol>
                 <hr />
-                <h3>Equipo de Trabajo</h3>
+                <h3 id="oficina-equipo">Equipo de Trabajo</h3>
                 <table>
                     <caption>Equipo de Trabajo</caption>
                     <thead>
@@ -193,8 +198,15 @@
                       <td><a href="mailto:carla.sga@usco.edu.co">carla.sga@usco.edu.co </a></td>
                     </tr>
                 </table>
+                <hr>
+                <div class="nav-go">
+                    <button type="button" data-go="oficina-somos" class="go-to">¿Quiénes Somos?</button>
+                    <button type="button" data-go="oficina-normatividad" class="go-to">Normatividad</button>
+                    <button type="button" data-go="oficina-diagrama" class="go-to">Diagrama</button>
+                    <button type="button" data-go="oficina-funciones" class="go-to">Funciones</button>
+                </div>
             </div>
-            <a href="#" class="close"><span></span></a>
+            <a href="#home" class="close"><span></span></a>
         </div>
     </section>
 
@@ -213,16 +225,22 @@
                     <li><a href="./docs/02/DECRETO-0529-2024.pdf" target="_blank">Decreto 0526 de 2024 del Ministerio de Educación</a>.</li>
                 </ul>
             </article>
-            <a href="#" class="close"><span></span></a>
+            <a href="#home" class="close"><span></span></a>
         </div>
     </section>
 
     <section class="panel fade bk-wine" id="acreditacion-programas">
         <div class="panel__content">
             <article class="panel__content--info">
-                <h2 class="m-b-0">Acreditación de Programas</h2>                
+                <h2 class="m-b-0" id="acredi-acreditacion">Acreditación de Programas</h2>
                 <p><a href="./docs/03/informe-estado-de-programas.pdf" target="_blank">Informe estado actual Acreditación de los Programas de Pregrado y Postgrado</a>.</p>
-                <h3>¿Qué evaluar?</h3>
+                <hr>
+                <div class="nav-go">
+                    <button type="button" data-go="acredi-evaluar" class="go-to">¿Qué evaluar?</button>
+                    <button type="button" data-go="acredi-normatividad" class="go-to">Normatividad</button>    
+                </div>
+                <hr>
+                <h3 id="acredi-evaluar">¿Qué evaluar?</h3>
                 <h4 class="m-t-0"><span>Factor 1</span><br>
                 Proyecto educativo del Programa e Identidad Institucional</h4>
                 <p>Un programa académico de alta  calidad se reconoce porque, a partir de su cultura evidente del mejoramiento  continuo, define unos referentes filosóficos, pedagógicos y organizacionales,  expuestos en sus lineamientos y políticas institucionales, los cuales son  coherentes entre sí, y quedan establecidos en el proyecto educativo del  programa o lo que haga sus veces, sirven de referentes fundamentales para el  desarrollo y cumplimiento de sus propósitos, y marcan la identidad propia de su  comunidad académica, la cual es reconocida por la sociedad. Las características  a evaluar son: <strong>1</strong>. Proyecto  educativo del programa. <strong>2. </strong>Relevancia académica y pertinencia social del  programa académico.</p>
@@ -260,7 +278,7 @@
                 Recursos de Infraestructura Física y Tecnológica</h4>
                 <p>Un programa académico de alta calidad se reconoce porque, de acuerdo con  su tradición y cultura del mejoramiento continuo y de los fines filosóficos,  pedagógicos y organizacionales que le dan identidad a su comunidad académica,  dispone de los recursos requeridos para dar cumplimiento a su proyecto  educativo, en coherencia con sus objetivos y de acuerdo con el nivel de  formación y la modalidad. Las características a evaluar son: <strong>47. </strong>Recursos de infraestructura física y tecnológica.<strong> 48. </strong>Recursos informáticos y de comunicación.</p>
                 <hr>
-                <h3>Normatividad</h3>
+                <h3 id="acredi-normatividad">Normatividad</h3>
                 <ul>
                     <li><a href="./docs/03/GUIA-PROCEDIMIENTO-01-2017.pdf" target="_blank">Guía de Procedimiento 01 de 2017, Consejo Nacional de Acreditación</a>.</li>
                     <li><a href="./docs/03/GUIA-01-2020.pdf" target="_blank">Guía 01 de 2020, Consejo Nacional de Acreditación</a>.</li>
@@ -271,26 +289,38 @@
                     <li><a href="./docs/03/ASPECTOS-EVALUAR-PROGRAMAS-2022.pdf" target="_blank">Aspectos por evaluar 2022, Consejo Nacional de Acreditación</a>.</li>
                     <li><a href="./docs/03/ANEXO-TECNICO-2-CNA.pdf" target="_blank">Documento Técnico 02 de 2022 del Consejo Nacional de Acreditación</a>.</li>
                 </ul>
+                <hr>
+                <div class="nav-go">
+                    <button type="button" data-go="acredi-acreditacion" class="go-to">Acreditación de Programas</button>
+                    <button type="button" data-go="acredi-evaluar" class="go-to">¿Qué evaluar?</button>
+                </div>
             </article>
-            <a href="#" class="close"><span></span></a>
+            <a href="#home" class="close"><span></span></a>
         </div>
     </section>
 
     <section class="panel fade bk-wine" id="acreditacion-institucional">
         <div class="panel__content">
             <article class="panel__content--info">
-                <h2 class="m-b-0">Generalidades</h2>
+                <h2 class="m-b-0" id="insti-generalidades">Generalidades</h2>
                 <h3>¿Qué es acreditación?</h3>
                 <p>Es una certificación expedida por el  Ministerio de Educación Nacional (MEN) a Instituciones de Educación Superior  que cumplan con las características de calidad definidas por el Consejo  Nacional de Acreditación.</p>
                 <p>La Acreditación Institucional No es un  resultado, es un Proceso de Auto Evaluación y Auto Regulación permanente que  favorece el reconocimiento académico y social, da visibilidad Nacional e  Internacional, permite el fortalecimiento de la comunidad académica y de sus  productos y resultados y su buen gobierno.</p>
                 <p>Además, es un proceso colectivo que  exige optimismo crítico, responsabilidad y humildad para lograr una  construcción de Región Inteligente a través de la formación de una Masa  Crítica.</p>
                 <hr />
-                
-                <!-- <button type="button" data-id="insti-documentos" class="go-to">Documentos</button> -->
+
+                <div class="nav-go">
+                    <button type="button" data-go="insti-fases" class="go-to">Fases</button>
+                    <button type="button" data-go="insti-evaluar" class="go-to">Qué evaluar</button>
+                    <button type="button" data-go="insti-beneficios" class="go-to">Beneficios</button>
+                    <button type="button" data-go="insti-comite" class="go-to">Comité</button>
+                    <button type="button" data-go="insti-documentos" class="go-to">Documentos</button>
+                    <button type="button" data-go="insti-normatividad" class="go-to">Normatividad</button>    
+                </div>
 
                 <hr />
 
-                <h3>Fases</h3>
+                <h3 id="insti-fases">Fases</h3>
                 <p>El Proceso de Acreditación Institucional, se desarrolla en 3 etapas principales</p>
                 <p><strong>Autoevaluación</strong>:<br />
                   La USCO abre camino hacia su  Acreditación Institucional de Alta Calidad, con la entrega del informe de  Autoevaluación de todos los factores y características, por parte del Comité  Central de Acreditación.&nbsp; Se envía solicitud al Consejo Nacional de  Acreditación (CNA) para verificación de condiciones y así poder continuar con  el informe.</p>
@@ -304,7 +334,7 @@
                   <li>El no cumplimiento de condiciones básicas de calidad por parte de la institución, caso en el cual, el CNA, formulará a la institución las recomendaciones  pertinentes.</li>
                 </ul>
                 <hr />
-                <h3>Qué evaluar</h3>
+                <h3 id="insti-evaluar">Qué evaluar</h3>
                 <h4 class="m-t-0"><span>Factor 1</span><br>
                 Identidad Institucional</h4>
                 <p>Una institución de alta calidad se reconoce por tener  unos valores declarados y un proyecto educativo institucional, o lo que haga  sus veces, socializados y apropiados por la comunidad. Las características a  evaluar son:<strong>1</strong>. Coherencia  y pertinencia de la misión. <strong>2.</strong> Orientaciones y estrategias del proyecto educativo  institucional o lo que haga sus veces. <strong>3.</strong> Formación integral y construcción de identidad.</p>
@@ -342,7 +372,7 @@
                 Comunidad de Egresados</h4>
                 <p>La institución deberá demostrar que cuenta  con programas y mecanismos de acompañamiento a sus egresados, con el propósito  de favorecer el ejercicio profesional y la inserción laboral de los mismos, el  aprendizaje continuo y el retorno curricular desde su experiencia hacia los  programas académicos, apoyándose en sistemas de información adecuados. Las  características a evaluar son: <strong>36. </strong>Seguimiento a  egresados<strong>.  37. </strong>Egresados y  programas académicos<strong>. 38. </strong>Relación de los egresados con la institución.</p>
                 <hr />
-                <h3>Beneficios</h3>
+                <h3 id="insti-beneficios">Beneficios</h3>
                 <h4>Para la Institución</h4>
                 <ul>
                   <li>Aumenta el prestigio y por tanto la  demanda de sus programas académicos.</li>
@@ -393,7 +423,7 @@
                   </li>
                 </ul>
                 <hr />
-                <h3>Comité</h3>
+                <h3 id="insti-comite">Comité</h3>
                 <table>
                     <caption>Comité</caption>
                     <thead>
@@ -445,7 +475,7 @@
                     </tr>
                     <tr>
                         <td>Ana Lilia Bernal</td>
-                        <td>Delegada Facultad de Ciencias Exactas Y Naturales</td>
+                        <td>Delegada Facultad de Ciencias Exactas y Naturales</td>
                         <td><a href="mailto:anliber@usco.edu.co">anliber@usco.edu.co </a></td>
                     </tr>
                     <tr>
@@ -455,7 +485,7 @@
                     </tr>
                     <tr>
                         <td>Rosmary Garzón González</td>
-                        <td>Delegada Facultad de Ciencias Sociales Y Humanas</td>
+                        <td>Delegada Facultad de Ciencias Sociales y Humanas</td>
                         <td><a href="mailto:rosmary.garzon@usco.edu.co">rosmary.garzon@usco.edu.co </a></td>
                     </tr>
                     <tr>
@@ -465,7 +495,7 @@
                     </tr>
                     <tr>
                         <td>Alexander Quintero</td>
-                        <td>Delegado Facultad de Economia Y Administracción</td>
+                        <td>Delegado Facultad de Economia y Administracción</td>
                         <td><a href="mailto:alexanderquintero@mialegria.edu.co">alexanderquintero@mialegria.edu.co </a></td>
                     </tr>
                     <tr>
@@ -488,8 +518,8 @@
                 </ul>
                 <h4>Procedimiento Acreditación Institucional</h4>
                 <ul>
-                    <li><a href="./docs/04/EV-ADC-PR-01 ACREDITACION Y RENOVACION DE ACREDITACION INSTITUCIONAL.docx">EV-ADC-PR-01 Acreditación y renovación de Acreditación Institucional</a>.</li>
-                    <li><a href="./docs/04/EV-ADC-PR-04 AUTORREGULACION Y PLANES DE MEJORAMIENTO.docx">EV-ADC-PR-04 Autorregulación y planes de mejoramiento</a>.</li>
+                    <li><a href="./docs/04/EV-ADC-PR-01 ACREDITACION y RENOVACION DE ACREDITACION INSTITUCIONAL.docx">EV-ADC-PR-01 Acreditación y renovación de Acreditación Institucional</a>.</li>
+                    <li><a href="./docs/04/EV-ADC-PR-04 AUTORREGULACION y PLANES DE MEJORAMIENTO.docx">EV-ADC-PR-04 Autorregulación y planes de mejoramiento</a>.</li>
                 </ul>
                 <h4>Proceso Acreditación Institucional</h4>
                 <ul>
@@ -511,7 +541,7 @@
 
                 <hr>
 
-                <h3>Normatividad</h3>
+                <h3 id="insti-normatividad">Normatividad</h3>
                 <ul>
                     <li><a href="./docs/04/ACUERDO 003 DE 2014.pdf" target="_blank">Acuerdo 03 de 2014 del Consejo Nacional de Educación Superior</a>.</li>
                     <li><a href="./docs/04/ACUERDO 03 DE 2017.pdf" target="_blank">Acuerdo 03 de 2017 del Consejo Nacional de Educación Superior</a>.</li>
@@ -531,10 +561,48 @@
                     <li><a href="./docs/04/Informe Comentarios del Rector al Informe de Evaluación Externa.pdf" target="_blank">Informe Comentarios del Rector al Informe de Evaluación Externa</a>.</li>
                 </ul>
 
+                <hr>
 
-
+                <div class="nav-go">
+                    <button type="button" data-go="insti-generalidades" class="go-to">Generalidades</button>
+                    <button type="button" data-go="insti-fases" class="go-to">Fases</button>
+                    <button type="button" data-go="insti-evaluar" class="go-to">Qué evaluar</button>
+                    <button type="button" data-go="insti-beneficios" class="go-to">Beneficios</button>
+                    <button type="button" data-go="insti-comite" class="go-to">Comité</button>
+                    <button type="button" data-go="insti-documentos" class="go-to">Documentos</button>    
+                </div>
             </article>
-            <a href="#" class="close"><span></span></a>
+            <a href="#home" class="close"><span></span></a>
+        </div>
+    </section>
+
+    <section class="panel slice bk-ocher" id="imagenes">
+        <div class="panel__content">
+            <h3 class="m-t-0"><span class="material-icons">photo_camera</span> Imágenes</h3>
+            <div id="splide" class="splide">                   
+                <div class="splide__progress">
+                    <div class="splide__progress__bar"></div>
+                </div>
+                <div class="splide__optional-button-container">
+                    <button class="splide__play-pause" aria-controls="splide-track">pause_circle</button>
+                </div>
+                
+                <div class="splide__track" id="splide-track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div>
+                                <img src="./docs/img/001.jpeg" alt="Aseguramiento de la Calidad, Universidad Surcolombiana">
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div>
+                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#home" class="close"><span></span></a>
         </div>
     </section>
 
@@ -582,6 +650,7 @@
         <div class="lds-ripple"><div></div><div></div></div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.3.1/dist/js/splide.min.js"></script>
     <script src="./dependencies/js/app.js"></script>
 </body>
 </html>

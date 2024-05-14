@@ -1,0 +1,90 @@
+.splide {
+    position: relative;
+
+    &__progress {
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+
+        &__bar {
+            height: .2rem;
+            background: rgba($usco-ocher-dark,.5);
+        }
+    }
+
+    &__arrows button {
+        background-color: $usco-ocher-dark;
+        @include transition-all(0.2s);
+
+        & svg {
+            fill: $usco-wine;
+        }
+    }
+
+    &__pagination {
+        bottom: -1rem;
+
+        &__page {
+            margin: .2rem;
+            background: $usco-ocher-dark;
+    
+            &.is-active {
+                background: $usco-wine;
+            }
+        }
+    }
+
+    
+    &__optional-button-container {
+        position: absolute;
+        z-index: 10;
+        right: 0;
+        bottom: 0;
+
+        & button {
+            padding: 0;
+            cursor: pointer;
+            font: 3rem "Material Icons";
+            color: rgba($usco-wine,.6);
+            background: $usco-ocher-dark;
+            border-radius: 50%;
+            border: none;
+            @include transition-all(0.2s);
+
+            &:hover, &:focus {
+                color: $usco-wine-dark;
+            }
+        }
+    }
+
+    &__slide {
+        & > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 1rem;
+            box-sizing: border-box;
+
+            & img {
+                max-width: 100%;
+                max-height: calc(100vh - 10rem);
+                border-radius: $border-radius;
+                box-shadow: 0 0 12px 0 rgba(0,0,0,0.2);
+            }
+        }
+    }
+}
+
+@media (max-width: map-get($grid-breakpoints, "xl")) {
+    .splide__arrow {
+        &--prev {
+            left: 2rem;
+        }
+        &--next {
+            right: 2em;
+        }
+    }
+}
+  
+// https://codepen.io/adamjohnson/pen/mdVVeXX 
