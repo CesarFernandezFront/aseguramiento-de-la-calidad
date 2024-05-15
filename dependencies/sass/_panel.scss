@@ -365,6 +365,8 @@
   
     &.bk-ocher {
       color: $gray-dark;
+      background: url(../img/usco-back2.svg) 122% center no-repeat;
+      background-size: auto 106%;
       background-color: $usco-ocher;
   
       @for $i from 1 through 6 {
