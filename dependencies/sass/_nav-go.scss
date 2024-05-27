@@ -4,7 +4,6 @@
     // justify-content: center;
     gap: 1rem;
     padding: 1rem;
-    background-color: rgba($black,.15);
     border-radius: $border-radius;
 
     & button {
@@ -44,13 +43,24 @@
     }
 }
 
+.bk-wine {
+    & .nav-go {
+        background-color: rgba($black,.2);
+
+        & button {
+            background-color: rgba($usco-wine-dark,.3);
+        }
+    }
+}
+
 .bk-ocher {
     & .nav-go {
         background-color: rgba($usco-ocher-dark,.25);
 
         & button {
-            color: rgba($gray-dark,.6);
-            border-color: rgba( $gray-dark,.2);
+            color: rgba($gray-dark,.8);
+            background-color: rgba($usco-ocher,.4);
+            border-color: rgba($gray-dark,.2);
         }
     }
 }

@@ -1,0 +1,29 @@
+ul.horizontal {
+    display: flex;
+    flex-wrap: wrap;
+
+    & li {
+        margin: 0 .5rem 0 0 !important;
+
+        &::before {
+            content: none;
+        }
+
+        & a {
+            padding: .5rem 1rem;
+            background-color: $usco-ocher;
+            border: 1px solid $usco-ocher-dark !important;
+            border-radius: $border-radius;
+            @include transition-all();
+
+            &::after {
+                display: none;
+            }
+
+            &:hover, &:focus {
+                color: $usco-ocher !important;
+                background-color: $usco-wine;
+            }
+        }
+    }
+}
