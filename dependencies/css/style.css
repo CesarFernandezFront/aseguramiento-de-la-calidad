@@ -281,19 +281,22 @@ hr {
 }
 .panel.home .panel__content--nav nav div {
   display: grid;
+  gap: 1.4rem;
 }
 .panel.home .panel__content--nav nav div:first-child {
   grid-template-columns: 4fr 2fr;
 }
 .panel.home .panel__content--nav nav div:nth-child(2) {
   padding: 1.4rem 0;
-  gap: 1.4rem;
   grid-template-columns: repeat(3, 1fr);
 }
 .panel.home .panel__content--nav nav div:nth-child(3) {
-  margin-top: 0.7rem;
-  gap: 1.4rem;
+  padding: 0.7rem 0;
   grid-template-columns: 5fr 5fr 1fr;
+}
+.panel.home .panel__content--nav nav div:nth-child(4) {
+  padding-top: 1.4rem;
+  grid-template-columns: 4fr 6fr;
 }
 .panel.home.view .panel__content {
   opacity: 1;
@@ -534,14 +537,19 @@ ul.horizontal li a:hover, ul.horizontal li a:focus {
   color: #F5F2E4;
   background: linear-gradient(180deg, #8F141B 0%, #5C0E12 60%);
 }
-.btn-wine {
+.btn-wine, .btn-wine-dark {
   padding: 0.8rem 2rem;
   font-size: 1.4rem;
   color: #DFD4A6;
-  background-color: #8F141B;
-  border: 3px solid rgba(92, 14, 18, 0.3);
 }
-.btn-wine:hover, .btn-wine:focus {
+.btn-wine {
+  background-color: #8F141B;
+}
+.btn-wine-dark {
+  background-color: #741016;
+  border: 3px solid #6b0f14;
+}
+.btn-wine-dark:hover, .btn-wine-dark:focus {
   background-color: #5C0E12;
 }
 

@@ -299,6 +299,7 @@
           & nav {
             & div {
               display: grid;
+              gap: $spacing-buttons;
   
               &:first-child {
                 grid-template-columns: 4fr 2fr;
@@ -306,14 +307,17 @@
   
               &:nth-child(2) {
                 padding: $spacing-buttons 0;
-                gap: $spacing-buttons;
                 grid-template-columns: repeat(3, 1fr);
               }
-  
+
               &:nth-child(3) {
-                margin-top: $spacing-buttons * .5;
-                gap: $spacing-buttons;
+                padding: $spacing-buttons * .5 0;
                 grid-template-columns: 5fr 5fr 1fr;
+              }
+
+              &:nth-child(4) {
+                padding-top: $spacing-buttons;
+                grid-template-columns: 4fr 6fr;
               }
             }
           }        

@@ -48,16 +48,23 @@
     }
   }
 
-  &-wine {
+  &-wine, &-wine-dark {
     padding: .8rem 2rem;
     font-size: 1.4rem;
     color: $usco-ocher;
+  }
+
+  &-wine {
     background-color: $usco-wine;
-    border: $border-width solid rgba($usco-wine-dark, .3);
+    // border: $border-width solid rgba($usco-wine-dark, .3);
+  }
+  
+  &-wine-dark {
+    background-color: darken($usco-wine, 6%);
+    border: $border-width solid darken($usco-wine, 8%);
 
     &:hover, &:focus {
       background-color: $usco-wine-dark;
     }
   }
 }
-      
