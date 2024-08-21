@@ -500,6 +500,10 @@
                             }
                         }
 
+                        &:nth-child(4) {
+                          grid-template-columns: 8fr 2fr;
+                        }
+
                         .btn {
                             padding: 1rem .4rem !important;
 
@@ -521,7 +525,7 @@
         }
 
         &.home .panel__content {
-          &--nav nav div:nth-child(3) {
+          &--nav nav div:nth-child(3), &--nav nav div:nth-child(4) {
             gap: $spacing-buttons * .8;
             grid-template-columns: 1fr;
           }

@@ -425,6 +425,9 @@ hr {
   .panel.home .panel__content--nav nav div:nth-child(2) .btn:first-child, .panel.home .panel__content--nav nav div:nth-child(2) .btn:nth-child(4) {
     grid-column: span 2;
   }
+  .panel.home .panel__content--nav nav div:nth-child(4) {
+    grid-template-columns: 8fr 2fr;
+  }
   .panel.home .panel__content--nav nav div .btn {
     padding: 1rem 0.4rem !important;
   }
@@ -436,7 +439,7 @@ hr {
   .panel__content {
     padding: 2rem 3rem;
   }
-  .panel.home .panel__content--nav nav div:nth-child(3) {
+  .panel.home .panel__content--nav nav div:nth-child(3), .panel.home .panel__content--nav nav div:nth-child(4) {
     gap: 1.12rem;
     grid-template-columns: 1fr;
   }
